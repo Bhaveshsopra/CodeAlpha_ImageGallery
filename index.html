@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive interactive image gallery built with HTML, CSS and JavaScript.">
+  <title>Frame — Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo"><span>F</span> FRAME.</a>
+    <a href="#gallery" class="nav-link">Explore Gallery ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">THE VISUAL COLLECTION</p>
+      <h1>Every picture<br>tells a <span>story.</span></h1>
+      <p class="hero-text">
+        A curated collection of moments, places and little details
+        that make the world beautiful.
+      </p>
+      <a href="#gallery" class="explore-btn">Discover the collection ↓</a>
+      <div class="hero-note">CURATED VISUALS · EST. 2026</div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">FIND YOUR PERSPECTIVE</p>
+          <h2>Explore the gallery</h2>
+        </div>
+        <p class="image-count" id="imageCount">12 photographs</p>
+      </div>
+
+      <div class="filters" aria-label="Filter gallery images">
+        <button class="filter active" data-category="all">All photos</button>
+        <button class="filter" data-category="nature">Nature</button>
+        <button class="filter" data-category="architecture">Architecture</button>
+        <button class="filter" data-category="people">People</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo"><span>F</span> FRAME.</a>
+    <p>Made with creativity & care · 2026</p>
+    <a href="#gallery">Back to top ↑</a>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="close-btn" id="closeBtn" aria-label="Close image">×</button>
+    <button class="lightbox-nav prev" id="prevBtn" aria-label="Previous image">‹</button>
+    <figure class="lightbox-content">
+      <img id="lightboxImage" src="" alt="">
+      <figcaption>
+        <span id="lightboxTitle"></span>
+        <span id="lightboxPosition"></span>
+      </figcaption>
+    </figure>
+    <button class="lightbox-nav next" id="nextBtn" aria-label="Next image">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
